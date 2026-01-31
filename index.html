@@ -35,24 +35,37 @@ body {
 h1 { 
     font-family: 'Metal Mania', cursive; 
     color: #8b0000; 
-    margin: 0 0 5px 0; 
+    margin: 0 0 10px 0; 
     font-size: 56px; 
     text-shadow: 2px 2px 5px #000;
-    min-height: 1.2em; /* Evita que o layout pule enquanto digita */
+    min-height: 1.2em;
 }
-h2, h3, h4 { font-family: 'Metal Mania', cursive; color: #ffffff; margin: 0 0 15px 0; }
-h2 { font-size: 38px; margin-bottom: 30px; }
-h3 { font-size: 30px; border-bottom: 1px solid #21262d; display: inline-block; padding-bottom: 5px; }
-h4 { font-size: 24px; color: #ff4d4d; }
+h2, h3, h4 { font-family: 'Metal Mania', cursive; color: #ffffff; margin: 0; }
+h2 { font-size: 38px; margin-bottom: 35px; }
+
+/* Ajuste de Respiro nos Títulos das Seções */
+h3 { 
+    font-size: 30px; 
+    border-bottom: 1px solid #21262d; 
+    display: inline-block; 
+    padding-bottom: 8px;
+    margin-bottom: 25px; /* Espaço entre título e conteúdo */
+}
+h4 { font-size: 24px; color: #ff4d4d; margin-bottom: 10px; }
 
 /* ===== CONTEÚDO GERAL ===== */
 .content {
     max-width: 900px;
     margin: auto;
-    padding: 40px 20px;
+    padding: 50px 25px; /* Aumentado respiro lateral e superior */
 }
 
-/* ===== LINKS (RED TEAM STYLE) ===== */
+/* Espaçador Global de Seções */
+.section-wrapper {
+    margin-bottom: 60px; /* Isso garante que uma seção não cole na outra */
+}
+
+/* ===== LINKS ===== */
 a { 
     color: #ff4d4d; 
     text-decoration: none; 
@@ -63,18 +76,23 @@ a:hover {
     text-shadow: 0 0 8px #ff4d4d; 
 }
 
-hr { border: 0; border-top: 1px solid #21262d; margin: 40px 0; }
+hr { border: 0; border-top: 1px solid #21262d; margin: 50px 0; }
 
 /* ===== BADGES & ICONS ===== */
-.badges img { margin: 5px 8px 5px 0; border-radius: 4px; }
+.badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px; /* Espaço entre as badges */
+}
+.badges img { border-radius: 4px; }
 
 /* ===== CARDS ===== */
 .writeup-card {
     background: #0d1117;
     border: 1px solid #30363d;
     border-radius: 12px;
-    padding: 20px;
-    margin: 20px 0;
+    padding: 25px;
+    margin: 25px 0;
     max-width: 650px;
     transition: transform 0.2s, border-color 0.2s;
 }
@@ -83,10 +101,9 @@ hr { border: 0; border-top: 1px solid #21262d; margin: 40px 0; }
     transform: translateY(-3px);
     box-shadow: 0 5px 15px rgba(0,0,0,0.5);
 }
-.writeup-card p { margin: 10px 0; color: #8b949e; font-size: 0.95rem; }
 
 /* ===== KUNG FU PANDA GLITCH ===== */
-.quote-container { margin: 50px auto; text-align: center; }
+.quote-container { margin: 60px auto; text-align: center; }
 .glitch {
     position: relative;
     color: #fff;
@@ -94,7 +111,7 @@ hr { border: 0; border-top: 1px solid #21262d; margin: 40px 0; }
     font-size: 1.5rem;
     text-transform: uppercase;
     font-weight: 700;
-    line-height: 1.3;
+    line-height: 1.4;
     display: inline-block;
     white-space: pre-wrap; 
     text-shadow: 0 0 10px #00ff00;
@@ -115,24 +132,15 @@ hr { border: 0; border-top: 1px solid #21262d; margin: 40px 0; }
 .glitch-h2 { color: #00ff00; font-family: 'Quantico', sans-serif; font-size: 0.9rem; letter-spacing: 5px; margin-top: 15px; opacity: 0.8; }
 
 /* Cursor de digitação */
-.cursor {
-    display: inline-block;
-    width: 10px;
-    background-color: #8b0000;
-    margin-left: 5px;
-    animation: blink 0.7s infinite;
-}
-@keyframes blink {
-    0% { opacity: 1; }
-    50% { opacity: 0; }
-    100% { opacity: 1; }
-}
+.cursor { display: inline-block; width: 10px; background-color: #8b0000; margin-left: 5px; animation: blink 0.7s infinite; }
+@keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
 
 /* RESPONSIVIDADE */
 @media (max-width: 600px) {
     h1 { font-size: 38px; }
     h2 { font-size: 28px; }
     .glitch { font-size: 1.1rem; }
+    .section-wrapper { margin-bottom: 45px; } /* Ajuste de espaço no mobile */
 }
 </style>
 </head>
@@ -143,11 +151,13 @@ hr { border: 0; border-top: 1px solid #21262d; margin: 40px 0; }
     <h1 id="typewriter"></h1>
     <h2><em>Meu nome é Djair Martins.</em></h2>
 
-    <p style="color: #8b949e; font-size: 1.1rem; border-left: 3px solid #8b0000; padding-left: 15px;">
-        Profissional de TI em transição para <strong>Cibersegurança</strong><br>
-        Infra • Linux • Redes • CTFs<br>
-        <span style="color: #ff4d4d;"><strong>eJPT</strong> em progresso</span>
-    </p>
+    <div class="section-wrapper">
+        <p style="color: #8b949e; font-size: 1.1rem; border-left: 3px solid #8b0000; padding-left: 15px;">
+            Profissional de TI em transição para <strong>Cibersegurança</strong><br>
+            Infra • Linux • Redes • CTFs<br>
+            <span style="color: #ff4d4d;"><strong>eJPT</strong> em progresso</span>
+        </p>
+    </div>
 
     <div class="quote-container">
         <div class="glitch" data-text="Se você só fizer o que sabe,&#10;nunca será mais do que é agora!">Se você só fizer o que sabe,<br>nunca será mais do que é agora!</div>
@@ -156,58 +166,70 @@ hr { border: 0; border-top: 1px solid #21262d; margin: 40px 0; }
 
     <hr>
 
-    <h3>🥇 Badges</h3>
-    <div style="margin: 25px 0;">
-        <iframe src="https://tryhackme.com/api/v2/badges/public-profile?userPublicId=5230186" style="border:none; width: 100%; max-width: 340px; height: 90px;" loading="lazy"></iframe>
+    <div class="section-wrapper">
+        <h3>🥇 Badges</h3>
+        <div style="margin-top: 10px;">
+            <iframe src="https://tryhackme.com/api/v2/badges/public-profile?userPublicId=5230186" style="border:none; width: 100%; max-width: 340px; height: 90px;" loading="lazy"></iframe>
+        </div>
     </div>
 
-    <h3>🛠 Tecnologias e Ferramentas</h3>
-    <div class="badges">
-        <img src="https://skillicons.dev/icons?i=windows,linux,kali,bash,powershell,py,golang,git,github,obsidian" alt="Skills">
+    <div class="section-wrapper">
+        <h3>🛠 Tecnologias e Ferramentas</h3>
+        <div class="badges">
+            <img src="https://skillicons.dev/icons?i=windows,linux,kali,bash,powershell,py,golang,git,github,obsidian" alt="Skills">
+        </div>
     </div>
 
-    <h3>🤝 Conecte-se comigo</h3>
-    <div class="badges">
-        <a href="https://github.com/7Kamaz" target="_blank"><img src="https://img.shields.io/badge/GITHUB-181717?style=for-the-badge&logo=github&logoColor=white"></a>
-        <a href="https://linkedin.com/in/djair-martins" target="_blank"><img src="https://img.shields.io/badge/LINKEDIN-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"></a>
-        <a href="https://discord.com/users/1402786758260822198" target="_blank"><img src="https://img.shields.io/badge/DISCORD-5865F2?style=for-the-badge&logo=discord&logoColor=white"></a>
-        <a href="https://tryhackme.com/p/Kamaz" target="_blank"><img src="https://img.shields.io/badge/TRYHACKME-red?style=for-the-badge&logo=tryhackme&logoColor=white"></a>
+    <div class="section-wrapper">
+        <h3>🤝 Conecte-se comigo</h3>
+        <div class="badges">
+            <a href="https://github.com/7Kamaz" target="_blank"><img src="https://img.shields.io/badge/GITHUB-181717?style=for-the-badge&logo=github&logoColor=white"></a>
+            <a href="https://linkedin.com/in/djair-martins" target="_blank"><img src="https://img.shields.io/badge/LINKEDIN-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"></a>
+            <a href="https://discord.com/users/1402786758260822198" target="_blank"><img src="https://img.shields.io/badge/DISCORD-5865F2?style=for-the-badge&logo=discord&logoColor=white"></a>
+            <a href="https://tryhackme.com/p/Kamaz" target="_blank"><img src="https://img.shields.io/badge/TRYHACKME-red?style=for-the-badge&logo=tryhackme&logoColor=white"></a>
+        </div>
     </div>
 
-    <h3>🌐 Idiomas</h3>
-    <div class="badges">
-        <img src="https://img.shields.io/badge/PORTUGUESE-NATIVE-8b0000?style=for-the-badge&labelColor=333">
-        <img src="https://img.shields.io/badge/ENGLISH-INTERMEDIARY-444?style=for-the-badge&labelColor=333">
-        <img src="https://img.shields.io/badge/SPANISH-BEGINNER-444?style=for-the-badge&labelColor=333">
+    <div class="section-wrapper">
+        <h3>🌐 Idiomas</h3>
+        <div class="badges">
+            <img src="https://img.shields.io/badge/PORTUGUESE-NATIVE-8b0000?style=for-the-badge&labelColor=333">
+            <img src="https://img.shields.io/badge/ENGLISH-INTERMEDIARY-444?style=for-the-badge&labelColor=333">
+            <img src="https://img.shields.io/badge/SPANISH-BEGINNER-444?style=for-the-badge&labelColor=333">
+        </div>
     </div>
 
     <hr>
 
-    <h3>🏆 Certificações</h3>
-    <div class="writeup-card">
-        <ul style="margin: 0; padding-left: 18px; color: #c9d1d9;">
-            <li><strong>DESEC</strong> — Introdução ao Pentest</li>
-            <li><strong>TryHackMe</strong> — Pre Security Certificate</li>
-            <li><strong>Fortinet</strong> — FCF (NSE 1 & NSE 2)</li>
-            <li><strong>Cisco</strong> — Introdução à Cibersegurança</li>
-            <li><strong>Alura</strong> — Imersão Dev 2025</li>
-        </ul>
+    <div class="section-wrapper">
+        <h3>🏆 Certificações</h3>
+        <div class="writeup-card">
+            <ul style="margin: 0; padding-left: 18px; color: #c9d1d9;">
+                <li><strong>DESEC</strong> — Introdução ao Pentest</li>
+                <li><strong>TryHackMe</strong> — Pre Security Certificate</li>
+                <li><strong>Fortinet</strong> — FCF (NSE 1 & NSE 2)</li>
+                <li><strong>Cisco</strong> — Introdução à Cibersegurança</li>
+                <li><strong>Alura</strong> — Imersão Dev 2025</li>
+            </ul>
+        </div>
+        <a href="https://7kamaz.github.io/assets/certifications/index.html" target="_blank" style="font-weight: bold;">📁 Abrir Diretório de Certificados</a>
     </div>
-    <a href="https://7kamaz.github.io/assets/certifications/index.html" target="_blank" style="font-weight: bold;">📁 Abrir Diretório de Certificados</a>
 
     <hr>
 
-    <h3>📄 Writeups & Labs</h3>
-    <div class="writeup-card">
-        <h4>Desec - Introdução ao Pentest</h4>
-        <p>Da enumeração à pós-exploração. Metodologia aplicada em ambientes reais.</p>
-        <a href="https://github.com/7Kamaz/Desec-Pentest" target="_blank">👉 Ver writeup completo</a>
-    </div>
+    <div class="section-wrapper">
+        <h3>📄 Writeups & Labs</h3>
+        <div class="writeup-card">
+            <h4>Desec - Introdução ao Pentest</h4>
+            <p>Da enumeração à pós-exploração. Metodologia aplicada em ambientes reais.</p>
+            <a href="https://github.com/7Kamaz/Desec-Pentest" target="_blank">👉 Ver writeup completo</a>
+        </div>
 
-    <div class="writeup-card">
-        <h4>eJPT - CTF 1</h4>
-        <p>Web Recon / Content Discovery. Uso de nmap, whatweb, wpscan e dirb.</p>
-        <a href="https://github.com/7Kamaz/eJPT/blob/main/CTF/eJPT_01.md" target="_blank">👉 Ver writeup completo</a>
+        <div class="writeup-card">
+            <h4>eJPT - CTF 1</h4>
+            <p>Web Recon / Content Discovery. Uso de nmap, whatweb, wpscan e dirb.</p>
+            <a href="https://github.com/7Kamaz/eJPT/blob/main/CTF/eJPT_01.md" target="_blank">👉 Ver writeup completo</a>
+        </div>
     </div>
 
     <div style="margin-top: 50px; opacity: 0.6;">
@@ -218,7 +240,7 @@ hr { border: 0; border-top: 1px solid #21262d; margin: 40px 0; }
 
 <script>
     const text = "Hello World! 🌐";
-    const speed = 150; // Velocidade em milisegundos
+    const speed = 150;
     let i = 0;
 
     function typeWriter() {
@@ -226,13 +248,8 @@ hr { border: 0; border-top: 1px solid #21262d; margin: 40px 0; }
             document.getElementById("typewriter").innerHTML += text.charAt(i);
             i++;
             setTimeout(typeWriter, speed);
-        } else {
-            // Remove o cursor ou mantém estático se quiser. 
-            // Aqui ele apenas para de digitar.
         }
     }
-
-    // Inicia o efeito ao carregar a página
     window.onload = typeWriter;
 </script>
 
