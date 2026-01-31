@@ -4,6 +4,9 @@
 <meta charset="UTF-8">
 <title>Djair Martins | Security</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#8b0000">
+
+<link rel="manifest" href="manifest.json">
 
 <meta name="description" content="Djair Martins | Bug Hunter • Red Team • CTF Player">
 <meta name="author" content="Djair Martins">
@@ -43,13 +46,12 @@ h1 {
 h2, h3, h4 { font-family: 'Metal Mania', cursive; color: #ffffff; margin: 0; }
 h2 { font-size: 38px; margin-bottom: 35px; }
 
-/* Ajuste de Respiro nos Títulos das Seções */
 h3 { 
     font-size: 30px; 
     border-bottom: 1px solid #21262d; 
     display: inline-block; 
     padding-bottom: 8px;
-    margin-bottom: 25px; /* Espaço entre título e conteúdo */
+    margin-bottom: 25px; 
 }
 h4 { font-size: 24px; color: #ff4d4d; margin-bottom: 10px; }
 
@@ -57,12 +59,11 @@ h4 { font-size: 24px; color: #ff4d4d; margin-bottom: 10px; }
 .content {
     max-width: 900px;
     margin: auto;
-    padding: 50px 25px; /* Aumentado respiro lateral e superior */
+    padding: 50px 25px;
 }
 
-/* Espaçador Global de Seções */
 .section-wrapper {
-    margin-bottom: 60px; /* Isso garante que uma seção não cole na outra */
+    margin-bottom: 60px;
 }
 
 /* ===== LINKS ===== */
@@ -78,15 +79,13 @@ a:hover {
 
 hr { border: 0; border-top: 1px solid #21262d; margin: 50px 0; }
 
-/* ===== BADGES & ICONS ===== */
 .badges {
     display: flex;
     flex-wrap: wrap;
-    gap: 12px; /* Espaço entre as badges */
+    gap: 12px;
 }
 .badges img { border-radius: 4px; }
 
-/* ===== CARDS ===== */
 .writeup-card {
     background: #0d1117;
     border: 1px solid #30363d;
@@ -131,16 +130,12 @@ hr { border: 0; border-top: 1px solid #21262d; margin: 50px 0; }
 
 .glitch-h2 { color: #00ff00; font-family: 'Quantico', sans-serif; font-size: 0.9rem; letter-spacing: 5px; margin-top: 15px; opacity: 0.8; }
 
-/* Cursor de digitação */
-.cursor { display: inline-block; width: 10px; background-color: #8b0000; margin-left: 5px; animation: blink 0.7s infinite; }
-@keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
-
 /* RESPONSIVIDADE */
 @media (max-width: 600px) {
     h1 { font-size: 38px; }
     h2 { font-size: 28px; }
     .glitch { font-size: 1.1rem; }
-    .section-wrapper { margin-bottom: 45px; } /* Ajuste de espaço no mobile */
+    .section-wrapper { margin-bottom: 45px; }
 }
 </style>
 </head>
@@ -242,7 +237,6 @@ hr { border: 0; border-top: 1px solid #21262d; margin: 50px 0; }
     const text = "Hello World! 🌐";
     const speed = 150;
     let i = 0;
-
     function typeWriter() {
         if (i < text.length) {
             document.getElementById("typewriter").innerHTML += text.charAt(i);
@@ -252,6 +246,5 @@ hr { border: 0; border-top: 1px solid #21262d; margin: 50px 0; }
     }
     window.onload = typeWriter;
 </script>
-
 </body>
 </html>
