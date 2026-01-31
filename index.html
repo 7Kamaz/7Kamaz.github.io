@@ -5,11 +5,9 @@
 <title>Djair Martins | Security</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- SEO básico -->
 <meta name="description" content="Djair Martins | Bug Hunter • Red Team • CTF Player">
 <meta name="author" content="Djair Martins">
 
-<!-- Open Graph -->
 <meta property="og:title" content="Djair Martins | Cybersecurity & Red Team">
 <meta property="og:description" content="Bug Hunter • CTF Player • eJPT in progress • Linux & Offensive Security">
 <meta property="og:type" content="website">
@@ -17,117 +15,78 @@
 <meta property="og:image" content="https://7kamaz.github.io/assets/images/kamaz.jpg">
 <meta property="og:site_name" content="Djair Martins">
 
-<!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Djair Martins | Cybersecurity & Red Team">
 <meta name="twitter:description" content="Bug Hunter • CTF Player • eJPT in progress • Linux & Offensive Security">
 <meta name="twitter:image" content="https://7kamaz.github.io/assets/images/kamaz.jpg">
 
 <link href="https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Quantico:wght@400;700&display=swap" rel="stylesheet">
 
 <style>
 /* ===== BACKGROUND GLOBAL ===== */
 body {
-	background:
-	linear-gradient(
-		rgba(13,17,23,0.9),
-					rgba(13,17,23,0.9)
-	),
-	url("assets/images/background.iris.jpg");
-	background-size: cover;
-	background-position: center;
-	background-attachment: fixed;
-	color: #c9d1d9;
-	font-family: Arial, Helvetica, sans-serif;
-	margin: 0;
-	padding: 0;
-	line-height: 1.6;
+    background: linear-gradient(rgba(13,17,23,0.9), rgba(13,17,23,0.9)), url("assets/images/background.iris.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #c9d1d9;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
 }
 
 /* ===== HEADINGS COM METAL MANIA ===== */
-h1 {
-	font-family: 'Metal Mania', cursive;
-	color: #440808;
-	margin: 0 0 15px 0;
-}
-
-h2, h3, h4{
-	font-family: 'Metal Mania', cursive;
-	color: #ffffff;
-	margin: 0 0 15px 0;
-}
-
-
-h1 { font-size: 64px; }   /* principal, bem chamativo */
-h2 { font-size: 48px; }   /* subtítulo principal */
-h3 { font-size: 36px; }   /* seções menores */
-h4 { font-size: 28px; }   /* títulos ainda menores */
+h1 { font-family: 'Metal Mania', cursive; color: #440808; margin: 0 0 15px 0; font-size: 64px; }
+h2, h3, h4 { font-family: 'Metal Mania', cursive; color: #ffffff; margin: 0 0 15px 0; }
+h2 { font-size: 48px; }
+h3 { font-size: 36px; }
+h4 { font-size: 28px; }
 
 /* ===== CONTEÚDO GERAL ===== */
 .content {
-	max-width: 900px;
-	margin: auto;
-	padding: 40px 20px;
+    max-width: 900px;
+    margin: auto;
+    padding: 40px 20px;
 }
 
 /* ===== LINKS ===== */
-a {
-	color: #58a6ff;
-	text-decoration: none;
-}
-
-hr {
-	border: 1px solid #21262d;
-	margin: 30px 0;
-}
+a { color: #58a6ff; text-decoration: none; }
+hr { border: 1px solid #21262d; margin: 30px 0; }
 
 /* ===== BADGES ===== */
-.badges img {
-	margin: 5px 5px 5px 0;
-}
+.badges img { margin: 5px 5px 5px 0; }
 
 /* ===== WRITEUP CARD ===== */
 .writeup-card {
-	background: #0d1117;
-	border: 1px solid #21262d;
-	border-radius: 14px;
-	padding: 16px 20px;
-	margin-top: 16px;
-	margin-bottom: 24px;
-	max-width: 600px;
+    background: #0d1117;
+    border: 1px solid #21262d;
+    border-radius: 14px;
+    padding: 16px 20px;
+    margin-top: 16px;
+    margin-bottom: 24px;
+    max-width: 600px;
 }
+.writeup-card p { margin: 6px 0; color: #8b949e; }
+.writeup-card a { display: inline-block; margin-top: 10px; font-weight: bold; }
 
-.writeup-card p {
-	margin: 6px 0;
-	color: #8b949e;
-}
-
-.writeup-card a {
-	display: inline-block;
-	margin-top: 10px;
-	font-weight: bold;
-}
-
-/* Kung Fu Panda - Versão com Quebra de Linha */
-@import url('https://fonts.googleapis.com/css2?family=Quantico:wght@400;700&display=swap');
-
+/* ===== KUNG FU PANDA GLITCH (FIXED) ===== */
 .quote-container {
     margin: 40px auto;
     text-align: center;
-    max-width: 100%;
-    padding: 0 15px;
+    width: 100%;
 }
 
 .glitch {
     position: relative;
     color: #fff;
     font-family: 'Quantico', sans-serif;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     text-transform: uppercase;
     font-weight: 700;
-    line-height: 1.3;
+    line-height: 1.2;
     display: inline-block;
-    /* Faz a quebra de linha funcionar no efeito */
     white-space: pre-wrap; 
     text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00;
     animation: pulse 1.5s infinite alternate;
@@ -141,25 +100,22 @@ hr {
     width: 100%;
     height: 100%;
     background: transparent;
-    /* Importante para alinhar as duas linhas do glitch */
     white-space: pre-wrap; 
     pointer-events: none;
 }
 
-/* Camada Rosa */
 .glitch::before {
     left: 3px;
     text-shadow: -3px 0 #ff00c1;
-    clip-path: inset(45% 0 45% 0);
-    animation: glitch-anim 2s infinite linear alternate-reverse;
+    clip-path: inset(0 0 50% 0);
+    animation: glitch-anim 2.5s infinite linear alternate-reverse;
 }
 
-/* Camada Ciano */
 .glitch::after {
     left: -3px;
     text-shadow: -3px 0 #00fff9;
-    clip-path: inset(10% 0 80% 0);
-    animation: glitch-anim2 3s infinite linear alternate-reverse;
+    clip-path: inset(50% 0 0 0);
+    animation: glitch-anim2 2s infinite linear alternate-reverse;
 }
 
 @keyframes pulse {
@@ -169,37 +125,37 @@ hr {
 
 @keyframes glitch-anim {
     0% { clip-path: inset(10% 0 30% 0); }
-    100% { clip-path: inset(80% 0 5% 0); }
+    20% { clip-path: inset(40% 0 10% 0); }
+    60% { clip-path: inset(10% 0 60% 0); }
+    100% { clip-path: inset(30% 0 20% 0); }
 }
 
 @keyframes glitch-anim2 {
-    0% { clip-path: inset(30% 0 20% 0); }
-    100% { clip-path: inset(50% 0 30% 0); }
+    0% { clip-path: inset(60% 0 10% 0); }
+    30% { clip-path: inset(10% 0 70% 0); }
+    70% { clip-path: inset(40% 0 40% 0); }
+    100% { clip-path: inset(20% 0 60% 0); }
 }
 
 .glitch-h2 {
     color: #00ff00;
     font-family: 'Quantico', sans-serif;
-    font-size: 1.1rem;
+    font-size: 1rem;
     letter-spacing: 5px;
-    margin-top: 20px;
+    margin-top: 15px;
 }
 
 /* Ajuste Mobile */
 @media (max-width: 600px) {
-    .glitch {
-        font-size: 1.3rem; /* Tamanho ideal para não esmagar no celular */
-        line-height: 1.4;
-    }
+    h1 { font-size: 42px; }
+    h2 { font-size: 32px; }
+    .glitch { font-size: 1.1rem; line-height: 1.4; }
+    .glitch-h2 { font-size: 0.8rem; letter-spacing: 2px; }
 }
-
-
 </style>
-
 </head>
 
 <body>
-
 <div class="content">
 
 <h1>Hello World! 🌐</h1>
@@ -207,114 +163,85 @@ hr {
 
 <hr>
 
-<p style="
-margin: 12px 0 18px 0;
-color: #8b949e;
-font-size: 1.05rem;
-">
-Profissional de TI em transição para <strong>Cibersegurança</strong><br>
-Infra • Linux • Redes • CTFs<br>
-<strong>eJPT</strong> em progresso
+<p style="margin: 12px 0 18px 0; color: #8b949e; font-size: 1.05rem;">
+    Profissional de TI em transição para <strong>Cibersegurança</strong><br>
+    Infra • Linux • Redes • CTFs<br>
+    <strong>eJPT</strong> em progresso
 </p>
 
 <hr>
 
 <div class="quote-container">
-  <div class="glitch" data-text="Se você só fizer o que sabe,&#10;nunca será mais do que é agora!">
-    Se você só fizer o que sabe,<br>nunca será mais do que é agora!
-  </div>
-  <div class="glitch-h2">- KUNG FU PANDA</div>
+    <div class="glitch" data-text="Se você só fizer o que sabe,&#10;nunca será mais do que é agora!">Se você só fizer o que sabe,<br>nunca será mais do que é agora!</div>
+    <div class="glitch-h2">- KUNG FU PANDA</div>
 </div>
 
 <hr>
 
 <h3>🥇 Badges</h3>
 <div style="margin: 20px 0;">
-<iframe
-src="https://tryhackme.com/api/v2/badges/public-profile?userPublicId=5230186"
-style="border:none; width: 340px; height: 90px;"
-loading="lazy">
-</iframe>
+    <iframe src="https://tryhackme.com/api/v2/badges/public-profile?userPublicId=5230186" style="border:none; width: 340px; height: 90px;" loading="lazy"></iframe>
 </div>
 
 <hr>
 
 <h3>🛠 Tecnologias e Ferramentas</h3>
 <div class="badges">
-<img src="https://skillicons.dev/icons?i=windows,linux,kali,bash,powershell,py,golang,git,github,obsidian" alt="Skills">
+    <img src="https://skillicons.dev/icons?i=windows,linux,kali,bash,powershell,py,golang,git,github,obsidian" alt="Skills">
 </div>
 
 <hr>
 
 <h3>🤝 Conecte-se comigo</h3>
 <div class="badges">
-<a href="https://github.com/7Kamaz" target="_blank">
-<img src="https://img.shields.io/badge/GITHUB-181717?style=for-the-badge&logo=github&logoColor=white">
-</a>
-
-<a href="https://linkedin.com/in/djair-martins" target="_blank">
-<img src="https://img.shields.io/badge/LINKEDIN-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white">
-</a>
-
-<a href="https://discord.com/users/1402786758260822198" target="_blank">
-<img src="https://img.shields.io/badge/DISCORD-5865F2?style=for-the-badge&logo=discord&logoColor=white">
-</a>
-
-<a href="https://tryhackme.com/p/Kamaz" target="_blank">
-<img src="https://img.shields.io/badge/TRYHACKME-red?style=for-the-badge&logo=tryhackme&logoColor=white">
-</a>
+    <a href="https://github.com/7Kamaz" target="_blank"><img src="https://img.shields.io/badge/GITHUB-181717?style=for-the-badge&logo=github&logoColor=white"></a>
+    <a href="https://linkedin.com/in/djair-martins" target="_blank"><img src="https://img.shields.io/badge/LINKEDIN-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"></a>
+    <a href="https://discord.com/users/1402786758260822198" target="_blank"><img src="https://img.shields.io/badge/DISCORD-5865F2?style=for-the-badge&logo=discord&logoColor=white"></a>
+    <a href="https://tryhackme.com/p/Kamaz" target="_blank"><img src="https://img.shields.io/badge/TRYHACKME-red?style=for-the-badge&logo=tryhackme&logoColor=white"></a>
 </div>
 
 <hr>
 
 <h3>🌐 Idiomas</h3>
 <div class="badges">
-<img src="https://img.shields.io/badge/PORTUGUESE-NATIVE-a4c639?style=for-the-badge&labelColor=555555">
-<img src="https://img.shields.io/badge/ENGLISH-INTERMEDIARY-007acc?style=for-the-badge&labelColor=555555">
-<img src="https://img.shields.io/badge/SPANISH-BEGINNER-007acc?style=for-the-badge&labelColor=555555">
+    <img src="https://img.shields.io/badge/PORTUGUESE-NATIVE-a4c639?style=for-the-badge&labelColor=555555">
+    <img src="https://img.shields.io/badge/ENGLISH-INTERMEDIARY-007acc?style=for-the-badge&labelColor=555555">
+    <img src="https://img.shields.io/badge/SPANISH-BEGINNER-007acc?style=for-the-badge&labelColor=555555">
 </div>
 
 <hr>
 
 <h3>🏆 Certificações</h3>
-
 <div class="writeup-card">
-<ul style="margin: 0; padding-left: 18px; color: #c9d1d9;">
-<li><strong>DESEC</strong> — Introdução ao Pentest</li>
-<li><strong>TryHackMe</strong> — Pre Security Certificate</li>
-<li><strong>Fortinet</strong> — FCF (NSE 1 & NSE 2)</li>
-<li><strong>Cisco</strong> — Introdução à Cibersegurança</li>
-<li><strong>Alura</strong> — Imersão Dev 2025</li>
-</ul>
+    <ul style="margin: 0; padding-left: 18px; color: #c9d1d9;">
+        <li><strong>DESEC</strong> — Introdução ao Pentest</li>
+        <li><strong>TryHackMe</strong> — Pre Security Certificate</li>
+        <li><strong>Fortinet</strong> — FCF (NSE 1 & NSE 2)</li>
+        <li><strong>Cisco</strong> — Introdução à Cibersegurança</li>
+        <li><strong>Alura</strong> — Imersão Dev 2025</li>
+    </ul>
 </div>
-<a href="https://7kamaz.github.io/assets/certifications/index.html" target="_blank">
-📁 Ver certificados
-</a>
+<a href="https://7kamaz.github.io/assets/certifications/index.html" target="_blank">📁 Ver certificados</a>
 
 <hr>
 
 <h3>📄 Writeups & Labs</h3>
-
 <div class="writeup-card">
-<h4>Desec - Introdução ao Pentest</h4>
-<p>Enumeração a pós-exploração</p>
-<a href="https://github.com/7Kamaz/Desec-Pentest" target="_blank">
-👉 Ver writeup completo
-</a>
+    <h4>Desec - Introdução ao Pentest</h4>
+    <p>Enumeração a pós-exploração</p>
+    <a href="https://github.com/7Kamaz/Desec-Pentest" target="_blank">👉 Ver writeup completo</a>
 </div>
 
 <div class="writeup-card">
-<h4>eJPT - CTF 1 – Web Recon / Content Discovery (eJPT)</h4>
-<p>Ferramentas: nmap • whatweb • wpscan • dirb</p>
-<a href="https://github.com/7Kamaz/eJPT/blob/main/CTF/eJPT_01.md" target="_blank">
-👉 Ver writeup completo
-</a>
+    <h4>eJPT - CTF 1 – Web Recon / Content Discovery (eJPT)</h4>
+    <p>Ferramentas: nmap • whatweb • wpscan • dirb</p>
+    <a href="https://github.com/7Kamaz/eJPT/blob/main/CTF/eJPT_01.md" target="_blank">👉 Ver writeup completo</a>
 </div>
 
 <hr>
 
 <div class="badges">
-<img src="https://img.shields.io/badge/No_IA_CONTENT-100%25_HUMAN_BY_Kamaz-blueviolet?style=for-the-badge&logo=human-rights-watch&logoColor=white">
+    <img src="https://img.shields.io/badge/No_IA_CONTENT-100%25_HUMAN_BY_Kamaz-blueviolet?style=for-the-badge&logo=human-rights-watch&logoColor=white">
 </div>
 
 </div>
