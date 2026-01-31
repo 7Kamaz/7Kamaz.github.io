@@ -108,14 +108,14 @@ hr {
 	font-weight: bold;
 }
 
-/* Kung Fu Panda - Versão Responsiva 2.0 */
+/* Kung Fu Panda - Versão com Quebra de Linha */
 @import url('https://fonts.googleapis.com/css2?family=Quantico:wght@400;700&display=swap');
 
 .quote-container {
     margin: 40px auto;
     text-align: center;
-    max-width: 100%; /* Garante que não vaze na tela */
-    padding: 0 10px;
+    max-width: 100%;
+    padding: 0 15px;
 }
 
 .glitch {
@@ -125,10 +125,11 @@ hr {
     font-size: 1.8rem;
     text-transform: uppercase;
     font-weight: 700;
-    line-height: 1.2; /* Espaço para o brilho respirar */
+    line-height: 1.3;
     display: inline-block;
-    /* Brilho base verde neon */
-    text-shadow: 0 0 10px #00ff00, 0 0 15px #00ff00;
+    /* Faz a quebra de linha funcionar no efeito */
+    white-space: pre-wrap; 
+    text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00;
     animation: pulse 1.5s infinite alternate;
 }
 
@@ -139,22 +140,24 @@ hr {
     left: 0;
     width: 100%;
     height: 100%;
-    background: transparent; /* Removido fundo que cobria o texto */
+    background: transparent;
+    /* Importante para alinhar as duas linhas do glitch */
+    white-space: pre-wrap; 
     pointer-events: none;
 }
 
-/* Camada Rosa/Roxa */
+/* Camada Rosa */
 .glitch::before {
-    left: 2px;
-    text-shadow: -2px 0 #ff00c1;
-    clip-path: inset(45% 0 45% 0); /* Mais preciso que rect */
+    left: 3px;
+    text-shadow: -3px 0 #ff00c1;
+    clip-path: inset(45% 0 45% 0);
     animation: glitch-anim 2s infinite linear alternate-reverse;
 }
 
 /* Camada Ciano */
 .glitch::after {
-    left: -2px;
-    text-shadow: -2px 0 #00fff9;
+    left: -3px;
+    text-shadow: -3px 0 #00fff9;
     clip-path: inset(10% 0 80% 0);
     animation: glitch-anim2 3s infinite linear alternate-reverse;
 }
@@ -166,34 +169,27 @@ hr {
 
 @keyframes glitch-anim {
     0% { clip-path: inset(10% 0 30% 0); }
-    20% { clip-path: inset(60% 0 10% 0); }
-    40% { clip-path: inset(40% 0 50% 0); }
     100% { clip-path: inset(80% 0 5% 0); }
 }
 
 @keyframes glitch-anim2 {
     0% { clip-path: inset(30% 0 20% 0); }
-    50% { clip-path: inset(10% 0 70% 0); }
     100% { clip-path: inset(50% 0 30% 0); }
 }
 
 .glitch-h2 {
     color: #00ff00;
     font-family: 'Quantico', sans-serif;
-    font-size: 1rem;
+    font-size: 1.1rem;
     letter-spacing: 5px;
-    margin-top: 15px;
+    margin-top: 20px;
 }
 
-/* ===== AJUSTE MOBILE CRÍTICO ===== */
+/* Ajuste Mobile */
 @media (max-width: 600px) {
     .glitch {
-        font-size: 1.1rem; /* Diminuído para caber melhor no Android */
+        font-size: 1.3rem; /* Tamanho ideal para não esmagar no celular */
         line-height: 1.4;
-    }
-    .glitch-h2 {
-        font-size: 0.8rem;
-        letter-spacing: 2px;
     }
 }
 
@@ -224,12 +220,11 @@ Infra • Linux • Redes • CTFs<br>
 <hr>
 
 <div class="quote-container">
-  <div class="glitch" data-text='"Se você só fizer o que sabe, nunca será mais do que é agora!"'>
-    "Se você só fizer o que sabe, nunca será mais do que é agora!"
+  <div class="glitch" data-text="Se você só fizer o que sabe,&#10;nunca será mais do que é agora!">
+    Se você só fizer o que sabe,<br>nunca será mais do que é agora!
   </div>
   <div class="glitch-h2">- KUNG FU PANDA</div>
 </div>
-
 
 <hr>
 
