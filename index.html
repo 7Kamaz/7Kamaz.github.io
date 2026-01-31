@@ -24,11 +24,11 @@ body {
     background-position: center;
     background-attachment: fixed;
     color: #c9d1d9;
-    /* Fonte Monospace para vibe de Terminal/Hacker */
     font-family: "Courier New", Courier, monospace; 
     margin: 0;
     padding: 0;
     line-height: 1.6;
+    overflow-x: hidden;
 }
 
 /* ===== TIPOGRAFIA (IDENTIDADE VISUAL) ===== */
@@ -38,6 +38,7 @@ h1 {
     margin: 0 0 5px 0; 
     font-size: 56px; 
     text-shadow: 2px 2px 5px #000;
+    min-height: 1.2em; /* Evita que o layout pule enquanto digita */
 }
 h2, h3, h4 { font-family: 'Metal Mania', cursive; color: #ffffff; margin: 0 0 15px 0; }
 h2 { font-size: 38px; margin-bottom: 30px; }
@@ -67,7 +68,7 @@ hr { border: 0; border-top: 1px solid #21262d; margin: 40px 0; }
 /* ===== BADGES & ICONS ===== */
 .badges img { margin: 5px 8px 5px 0; border-radius: 4px; }
 
-/* ===== CARDS (ESTILIZADOS) ===== */
+/* ===== CARDS ===== */
 .writeup-card {
     background: #0d1117;
     border: 1px solid #30363d;
@@ -113,12 +114,25 @@ hr { border: 0; border-top: 1px solid #21262d; margin: 40px 0; }
 
 .glitch-h2 { color: #00ff00; font-family: 'Quantico', sans-serif; font-size: 0.9rem; letter-spacing: 5px; margin-top: 15px; opacity: 0.8; }
 
-/* ===== RESPONSIVIDADE ===== */
+/* Cursor de digitação */
+.cursor {
+    display: inline-block;
+    width: 10px;
+    background-color: #8b0000;
+    margin-left: 5px;
+    animation: blink 0.7s infinite;
+}
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* RESPONSIVIDADE */
 @media (max-width: 600px) {
     h1 { font-size: 38px; }
     h2 { font-size: 28px; }
     .glitch { font-size: 1.1rem; }
-    .content { padding: 20px 15px; }
 }
 </style>
 </head>
@@ -126,7 +140,7 @@ hr { border: 0; border-top: 1px solid #21262d; margin: 40px 0; }
 <body>
 <div class="content">
 
-    <h1>Hello World! 🌐</h1>
+    <h1 id="typewriter"></h1>
     <h2><em>Meu nome é Djair Martins.</em></h2>
 
     <p style="color: #8b949e; font-size: 1.1rem; border-left: 3px solid #8b0000; padding-left: 15px;">
@@ -201,5 +215,26 @@ hr { border: 0; border-top: 1px solid #21262d; margin: 40px 0; }
     </div>
 
 </div>
+
+<script>
+    const text = "Hello World! 🌐";
+    const speed = 150; // Velocidade em milisegundos
+    let i = 0;
+
+    function typeWriter() {
+        if (i < text.length) {
+            document.getElementById("typewriter").innerHTML += text.charAt(i);
+            i++;
+            setTimeout(typeWriter, speed);
+        } else {
+            // Remove o cursor ou mantém estático se quiser. 
+            // Aqui ele apenas para de digitar.
+        }
+    }
+
+    // Inicia o efeito ao carregar a página
+    window.onload = typeWriter;
+</script>
+
 </body>
 </html>
